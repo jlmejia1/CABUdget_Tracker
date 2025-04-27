@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<!-- Dashboard Section -->
+<section id="dashboard" class="content-section">
+  <div class="summary-cards">
+    <div class="summary-card income">
+      <i class="fas fa-wallet"></i>
+      <div>
+        <h3>Total Income</h3>
+        <p>₱<span id="totalIncome">3,000.00</span></p>
+      </div>
+    </div>
+    <div class="summary-card expense">
+      <i class="fas fa-shopping-bag"></i>
+      <div>
+        <h3>Total Expenses</h3>
+        <p>₱<span id="totalExpenses">1,600.00</span></p>
+      </div>
+    </div>
+    <div class="summary-card balance">
+      <i class="fas fa-scale-balanced"></i>
+      <div>
+        <h3>Balance</h3>
+        <p>₱<span id="balance">1,400.00</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-card">
+      <h4>Expense Distribution</h4>
+      <canvas id="categoryChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h4>Monthly Trend</h4>
+      <canvas id="trendChart"></canvas>
+    </div>
+  </div>
+</section>
+{% endblock %}
