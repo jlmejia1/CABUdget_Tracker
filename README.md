@@ -70,7 +70,7 @@ Each item in the list includes an edit button on its far-right side. Clicking th
 
 The original description 'OnlyFans (example)' was updated to 'Tiktok Live.' Clicking Submit instantly saves the changes,
 
-![Edit Income Success](samplescreenshots/edit_income_sucess.png)
+![Edit Income Success](samplescreenshots/edit_income_success.png)
 
 while selecting Delete removes the entry entirely and displays a 'Record removed' confirmation message appears.
 
