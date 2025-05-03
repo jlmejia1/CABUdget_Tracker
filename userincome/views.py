@@ -21,21 +21,24 @@ def search_income(request):
         return JsonResponse(list(data), safe=False)
 
 
-@login_required(login_url='/authentication/login')
 def index(request):
     categories = Source.objects.all()
     income = UserIncome.objects.filter(owner=request.user)
-    paginator = Paginator(income, 5)
+    paginator   = Paginator(income, 5)
     page_number = request.GET.get('page')
-    page_obj = Paginator.get_page(paginator, page_number)
-    currency = UserPreference.objects.get(user=request.user).currency
+    page_obj    = paginator.get_page(page_number)
+
+    try:
+        currency = UserPreference.objects.get(user=request.user).currency
+    except UserPreference.DoesNotExist:
+        currency = 'USD'
     context = {
-        'income': income,
-        'page_obj': page_obj,
-        'currency': currency
+        'categories': categories,   # include if template needs it
+        'income':     income,
+        'page_obj':   page_obj,
+        'currency':   currency,
     }
     return render(request, 'income/index.html', context)
-
 
 @login_required(login_url='/authentication/login')
 def add_income(request):

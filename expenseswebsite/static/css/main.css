@@ -21,3 +21,76 @@
 .showPasswordToggle:hover {
   transform: scale(1.2);
 }
+
+.card {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    box-shadow: 0 8px 32px rgba(0, 87, 255, 0.1); /* Subtle shadow */
+  }
+
+  .card-title h4 {
+    color: #0057FF; /* Use the deep blue from gradient */
+    font-weight: 600;
+  }
+
+  .form-control {
+    border: 1px solid rgba(0, 87, 255, 0.2); /* Subtle border */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .form-control:focus {
+    border-color: #0057FF;
+    box-shadow: 0 0 0 3px rgba(0, 87, 255, 0.1);
+  }
+
+  .submit-btn {
+    background: #0057FF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: #0045cc;
+    transform: translateY(-1px);
+  }
+
+  /* Center the card vertically */
+  .row {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*FOR DASHBOARD */
+/* make the sidebar slightly elevated */
+.sidebar {
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* link base style */
+.sidebar .nav-link {
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* hover effect */
+.sidebar .nav-link:hover {
+  background-color: rgba(0,87,255,0.1); /* very light blue tint */
+  color: #0057FF;
+}
+
+/* active/current page */
+.sidebar .nav-link.active,
+.sidebar .nav-link.active:hover {
+  background-color: #0057FF;
+  color: #fff;
+}  

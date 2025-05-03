@@ -4,15 +4,72 @@
 
 {% block content %}
 
+<style>
+  html, body {
+    /* make sure it fills the viewport */
+    min-height: 100vh;
+    margin: 0;
+    /* gradient from light sky blue to deeper blue */
+    background: linear-gradient(
+      to bottom,
+      #00E5E5,  /* light-cyan */
+      #0057FF   /* deep-blue */
+    );
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    box-shadow: 0 8px 32px rgba(0, 87, 255, 0.1); /* Subtle shadow */
+  }
+
+  .card-title h4 {
+    color: #0057FF; /* Use the deep blue from gradient */
+    font-weight: 600;
+  }
+
+  .form-control {
+    border: 1px solid rgba(0, 87, 255, 0.2); /* Subtle border */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .form-control:focus {
+    border-color: #0057FF;
+    box-shadow: 0 0 0 3px rgba(0, 87, 255, 0.1);
+  }
+
+  .submit-btn {
+    background: #0057FF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: #0045cc;
+    transform: translateY(-1px);
+  }
+</style>
+
+<div class="text-center pt-4">
+  <img src="{% static 'img/cabudget_logo.png' %}"
+       alt="Logo"
+       class="img-fluid"
+       style="max-width: 300px;">
+</div>
+
 <div class="row">
   <div class="col-md-4"></div>
   <div class="col-md-4">
     <div class="card mt-5">
 
-
       <div class="card-body">
         <div class="card-title py-3">
-          <h4>Login to your  account</h4>
+          <h4 class="text-center">Login to your account</h4>
         </div>
         <form action="{% url 'login' %}" method="post">
           {% csrf_token %}
@@ -38,6 +95,9 @@
             />
           </div>
           <input type="submit" value="Login" class="btn btn-block btn-primary submit-btn" />
+          <p class="text-center mt-3">
+            or <a href="{% url 'register' %}">Create Account</a>
+          </p>
         </form>
 
       </div>
