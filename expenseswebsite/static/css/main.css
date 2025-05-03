@@ -67,30 +67,4 @@
     justify-content: center;
   }
 
-  /*FOR DASHBOARD */
-/* make the sidebar slightly elevated */
-.sidebar {
-  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-  transition: width 0.3s ease, background-color 0.3s ease;
-}
-
-/* link base style */
-.sidebar .nav-link {
-  color: #333;
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* hover effect */
-.sidebar .nav-link:hover {
-  background-color: rgba(0,87,255,0.1); /* very light blue tint */
-  color: #0057FF;
-}
-
-/* active/current page */
-.sidebar .nav-link.active,
-.sidebar .nav-link.active:hover {
-  background-color: #0057FF;
-  color: #fff;
-}  
+  
