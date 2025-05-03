@@ -118,3 +118,6 @@ while selecting Delete removes the entry entirely and displays a 'Record removed
 
 **9) Change Admin Password:**
 ![Change Admin Password](samplescreenshots/change_admin_password.png)
+
+## References  
+- [Cryce Truly - Python Django Tutorial Playlist](https://www.youtube.com/watch?v=gAI218HSK8s&list=PLx-q4INfd95G-wrEjKDAcTB1K-8n1sIiz)  
