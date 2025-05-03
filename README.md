@@ -1,7 +1,7 @@
 # CABudget Tracker
 The CABudget Tracker is an online tool designed to help people organize their money by keeping tabs on earnings and spending. It includes features like secure login to protect user accounts, the ability to add, modify, or delete transactions, and interactive charts or graphs to display spending patterns and financial trends in an easy-to-understand way.
 
-## _Features_
+## _Features (for Users)_
 **1) User Registration and Login:** The project includes a user registration and login page, as shown in the images below. When accessing the app, users are first directed to the login page, which displays fields for entering a username and password.
 
 ![Login Page](samplescreenshots/login.png)
@@ -84,3 +84,40 @@ while selecting Delete removes the entry entirely and displays a 'Record removed
 **5) Username display and Sign-out button:** In all the screenshots above, the right side of the header displays a username and a signout button. Once the button is clicked, the user is logged out and redirected back to the login page with notification "You have been logged out."
 
 ![Log out](samplescreenshots/log_out.png)
+
+## _Features (for Admin)_
+**1) Admin Login:**
+![Log in](samplescreenshots/admin_login.png)
+
+**2) Admin View:**
+![Log in](samplescreenshots/site_administration.png)
+
+**3) Add/Change Groups:**
+![Add Groups](samplescreenshots/add_groups.png)
+![Change Groups](samplescreenshots/change_groups.png)
+
+**4) Add/Change Users:**
+![Add Users](samplescreenshots/add_users.png)
+![Change Users](samplescreenshots/change_users.png)
+
+**5) Add/Change Expense Categories:**
+![Add Categories](samplescreenshots/add_categories.png)
+![Change Categories](samplescreenshots/change_categories.png)
+
+**6) Add/Change Expenses:**
+![Add Expenses](samplescreenshots/add_admin_expense.png)
+![Change Expenses](samplescreenshots/change_admin_expense.png)
+
+**7) Add/Change Income Sources:**
+![Add Sources](samplescreenshots/add_sources.png)
+![Change Categories](samplescreenshots/change_sources.png)
+
+**8) Add/Change Users' Income:**
+![Add User Income](samplescreenshots/add_user_income.png)
+![Change User Income](samplescreenshots/change_user_income.png)
+
+**9) Change Admin Password:**
+![Change Admin Password](samplescreenshots/change_admin_password.png)
+
+## References  
+- [Cryce Truly - Python Django Tutorial Playlist](https://www.youtube.com/watch?v=gAI218HSK8s&list=PLx-q4INfd95G-wrEjKDAcTB1K-8n1sIiz)  
