@@ -121,3 +121,7 @@ while selecting Delete removes the entry entirely and displays a 'Record removed
 
 ## References  
 - [Cryce Truly - Python Django Tutorial Playlist](https://www.youtube.com/watch?v=gAI218HSK8s&list=PLx-q4INfd95G-wrEjKDAcTB1K-8n1sIiz)  
+
+Disclaimer:
+The .venv environment is used only to activate the django. This is not guaranteed to work after cloning the repository. It is advisable to delete it and create new environment (python -m venv <preffered env name>). After cloning, please install the following requirements: 
+pip install django django_heroku six validate-email
