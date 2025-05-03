@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 import json
 from django.http import JsonResponse
 # Create your views here.
-
+import datetime
 
 def search_income(request):
     if request.method == 'POST':
@@ -111,3 +111,31 @@ def delete_income(request, id):
     income.delete()
     messages.success(request, 'record removed')
     return redirect('income')
+
+def income_category_summary(request):
+    todays_date = datetime.date.today()
+    six_months_ago = todays_date-datetime.timedelta(days=30*6)
+    incomes = UserIncome.objects.filter(owner=request.user,
+                                      date__gte=six_months_ago, date__lte=todays_date)
+    finalrep = {}
+
+    def get_category(expense):
+        return incomes.source
+    category_list = list(set(map(get_category, incomes)))
+
+    def get_expense_category_amount(category):
+        amount = 0
+        filtered_by_category = incomes.filter(category=incomes)
+
+        for item in filtered_by_category:
+            amount += item.amount
+        return amount
+
+    for x in incomes:
+        for y in category_list:
+            finalrep[y] = get_expense_category_amount(y)
+
+    return JsonResponse({'income_category_data': finalrep}, safe=False)
+
+def income_stats_view(request):
+    return render(request, 'income/income_stats.html')
